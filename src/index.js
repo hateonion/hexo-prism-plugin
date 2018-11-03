@@ -166,11 +166,11 @@ function copyAssets() {
 function importAssets(code, data) {
   const js = [];
   const css = [
-    `<link rel="stylesheet" href="${rootPath}css/${prismThemeFileName}" type="text/css">`
+    `<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/prismjs@1.15.0/themes/{prismThemeFileName}" type="text/css">`
   ];
 
   if (line_number && custom_css === null) {
-    css.push(`<link rel="stylesheet" href="${rootPath}css/prism-line-numbers.css" type="text/css">`);
+    css.push(`<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/prismjs@1.15.0/plugins/line-numbers/prism-line-numbers.css" type="text/css">`);
   }
   if (mode === 'realtime') {
     js.push(`<script src="${rootPath}js/prism.js"></script>`);
